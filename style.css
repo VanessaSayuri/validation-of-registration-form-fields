@@ -12,11 +12,13 @@ body{
     /* width: 100vw; */
     height: 100vh;
     width: 100%;
+
     display: flex;
+    /* flex-wrap: wrap; */
     flex-direction: row;
-    
     justify-content: center;
     align-items: center;
+    align-content: center;
     margin: auto;
 }
 
@@ -54,9 +56,19 @@ body{
     align-items: center;
 }
 
+.section-plan{
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 3px;
+}
+
 
 .container-form{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -64,4 +76,12 @@ body{
     background-color: white;
     border: 6px;
     border-color: white;
+}
+
+input{
+    margin: 8px;
+}
+
+input.invalid {
+    border-color: red;
 }

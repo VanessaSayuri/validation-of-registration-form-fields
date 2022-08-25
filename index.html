@@ -29,13 +29,27 @@
         <div class="section-plan">
           Try it free 7 days then $20/mo. thereafter
         </div>
-        <div>
+        <div class="container-form">
           <form>
             <div>
-              <input type="text" id="fname" placeholder="First Name" />
+              <input
+                required
+                type="text"
+                id="firstname"
+                placeholder="First Name"
+              />
+              <span class="error"></span>
             </div>
             <div>
-              <input type="text" id="lname" placeholder="Last Name" />
+              <input
+                required
+                type="text"
+                id="lastname"
+                placeholder="Last Name"
+              />
+              <span class="error">
+                <!-- Last Name can not be empty! -->
+              </span>
             </div>
             <div>
               <input type="email" id="mail" placeholder="Email Address" />
@@ -53,5 +67,6 @@
         </div>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
