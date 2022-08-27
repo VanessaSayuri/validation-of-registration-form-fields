@@ -4,7 +4,7 @@ body{
     background-color: hsl(0, 100%, 74%);
     background-image: url("images/bg-intro-desktop.png");
     width: 1440px;
-    margin: 0px;
+    margin: auto;
 
 }
 
@@ -16,9 +16,9 @@ body{
     display: flex;
     /* flex-wrap: wrap; */
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    align-content: center;
+    align-content: space-around;
     margin: auto;
 }
 
@@ -27,10 +27,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 15px;
+    /* margin-left: 20px; */
     color: white;
     width: 100%;
-    
+
 
 }
 
@@ -39,10 +39,11 @@ body{
     font-weight: 700;
     text-align: center;
     margin: auto;
+    font-size: 2.8em;
 }
 
 .subtitle-slogan{
-    text-align: center;
+    text-align: left;
     margin: auto;
 }
 
@@ -60,9 +61,10 @@ body{
     background-color: hsl(248, 32%, 49%);
     border-radius: 5px;
     color: white;
-    padding: 5px;
-    margin: 5px;
+    padding: 15px 80px;
+    margin: 15px;
     box-shadow: 3px;
+    font-size: 0.8rem;
 }
 
 
@@ -76,12 +78,36 @@ body{
     background-color: white;
     border: 6px;
     border-color: white;
+    padding: 20px 20px;
+    width: 70%;
+    margin: auto;
 }
 
 input{
     margin: 8px;
+    padding: 10px 10px 10px 30px;
+    width: 100%;
 }
 
 input.invalid {
     border-color: red;
+}
+
+
+
+button{
+    border: none;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+    padding: 10px 100px;
+}
+
+
+
+.terms-services{
+    font-size: 0.6rem;
+    padding: 15px;
 }
