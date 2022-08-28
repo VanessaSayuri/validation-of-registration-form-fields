@@ -17,7 +17,7 @@
     <div class="container">
       <div class="slogan">
         <div class="title-slogan">
-          <h3>Learn to code by watching others</h3>
+          <h1>Learn to code by watching others</h1>
         </div>
 
         <div class="subtitle-slogan">
@@ -31,38 +31,54 @@
 
       <div class="section-form">
         <div class="section-plan">
-          <p>Try it free 7 days then $20/mo. thereafter</p>
+          <p><a href="">Try it free 7 days</a> then $20/mo. thereafter</p>
         </div>
         <div class="container-form">
           <form>
             <div>
-              <input
-                required
-                type="text"
-                id="firstname"
-                placeholder="First Name"
-              />
-              <span class="error"></span>
+              <div>
+                <input
+                  required
+                  class="firstname"
+                  type="text"
+                  id="firstname"
+                  placeholder="First Name"
+                />
+                <span class="error"></span>
+              </div>
+              <div>
+                <input
+                  class="lastname"
+                  required
+                  type="text"
+                  id="lastname"
+                  placeholder="Last Name"
+                />
+                <span class="error"></span>
+              </div>
+              <div>
+                <input
+                  required
+                  type="email"
+                  id="mail"
+                  placeholder="Email Address"
+                />
+                <span class="error"></span>
+              </div>
+              <div>
+                <input
+                  required
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                />
+                <span class="error"></span>
+              </div>
             </div>
             <div>
-              <input
-                required
-                type="text"
-                id="lastname"
-                placeholder="Last Name"
-              />
-              <span class="error">
-                <!-- Last Name can not be empty! -->
-              </span>
-            </div>
-            <div>
-              <input type="email" id="mail" placeholder="Email Address" />
-            </div>
-            <div>
-              <input type="password" id="password" placeholder="Password" />
-            </div>
-            <div class="button">
-              <button type="submit">Claim your free trial</button>
+              <button class="button" type="submit">
+                Claim your free trial
+              </button>
             </div>
           </form>
           <div class="terms-services">

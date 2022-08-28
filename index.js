@@ -22,6 +22,31 @@ function ValidateField(field){
 
     }
 
+    //exibir os erros do ValidtyState (estados)
+    console.log(field.validity)
+    
+
+    function customMessage(typeError){
+
+        const messages = {
+            //tipo do campo
+            text:{
+                //ValidityState
+                valueMissing: "First Name can not be empty!"
+            },
+            email: {
+                valueMissing: "Looks like this is not an email",
+                typeMismatch: "email@example/com"
+            },
+            password:{
+                valueMissing:"Password can not be empty!"
+            }
+        }
+  
+        return messages[field.type][typeError]
+    }
+
+    // inserir essa função para cada tipo de campo 
     function setCustomMessage (message){
         const spanError = field.parentNode.querySelector("span.error")
         if(message){
@@ -39,31 +64,35 @@ function ValidateField(field){
         
     }
 
-    return function(){
-        if (verifyErrors()){
-            field.style.borderColor = "red"
-            setCustomMessage ("First Name can not be empty!")
+        return function(){
+
+            const error = verifyErrors()
+            
+            if (error){
+                const message = customMessage(error)
+                field.style.borderColor = "red"
+                setCustomMessage (message)
+            }
+            else{
+                setCustomMessage()
+            }
         }
-        else{
-            setCustomMessage()
-        }
-    };
-}
+    }
+
 
 
 function customValidation(event){
 
     const field = event.target;
+    console.log(field);
+    const validation = ValidateField(field)
 
-    const validation = ValidateField(field);
-
-    validation();
+    validation()
     
 }
 
 
-
-for(let field of fields){
+for (field of fields){
     field.addEventListener("invalid", event => {
         //elliminar o bubble
         event.preventDefault() // só faz sentido usar ele aqui pois o bubble só exite no evento "inválido"
@@ -71,7 +100,7 @@ for(let field of fields){
     })
    
     field.addEventListener("blur", customValidation)
-} 
+}
 
 
 
@@ -81,3 +110,13 @@ document.querySelector("form").addEventListener("submit", event => {
     //impedir de enviar o formulário (reload da página)
     event.preventDefault();
 });
+
+//-------------------------------------------------------------------------
+
+    // if(error){
+    //     //trocar mensagem de required
+    //     field.setCustomValidity("First Name can not be empty!")
+    // }
+    // else{
+    //     field.setCustomValidity("")
+    // }
